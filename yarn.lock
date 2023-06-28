@@ -5762,39 +5762,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"admin@workspace:apps/client-admin":
-  version: 0.0.0-use.local
-  resolution: "admin@workspace:apps/client-admin"
-  dependencies:
-    "@next/font": ^13.4.7
-    "@storybook/addon-actions": ^7.0.6
-    "@storybook/addon-essentials": ^7.0.6
-    "@storybook/addon-interactions": ^7.0.6
-    "@storybook/addon-links": ^7.0.6
-    "@storybook/nextjs": ^7.0.6
-    "@types/node": ^18.15.11
-    "@types/react": ^18.0.33
-    "@types/react-dom": ^18.0.11
-    "@typescript-eslint/eslint-plugin": ^5.57.1
-    autoprefixer: ^10.4.14
-    chromatic: ^6.17.3
-    eslint-config-common: "workspace:*"
-    next: ^13.4.7
-    postcss: ^8.4.24
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    storybook: ^7.0.6
-    storybook-addon-designs: ^6.3.1
-    storybook-addon-turbo-build: ^2.0.0
-    tailwind: ^4.0.0
-    tsconfig-common: "workspace:*"
-    turbo: ^1.9.3
-    typescript: ^5.1.5
-    viem: ^1.2.0
-    wagmi: ^1.3.2
-  languageName: unknown
-  linkType: soft
-
 "aes-js@npm:^3.1.2":
   version: 3.1.2
   resolution: "aes-js@npm:3.1.2"
@@ -7191,6 +7158,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"client-admin@workspace:apps/client-admin":
+  version: 0.0.0-use.local
+  resolution: "client-admin@workspace:apps/client-admin"
+  dependencies:
+    "@next/font": ^13.4.7
+    "@storybook/addon-actions": ^7.0.6
+    "@storybook/addon-essentials": ^7.0.6
+    "@storybook/addon-interactions": ^7.0.6
+    "@storybook/addon-links": ^7.0.6
+    "@storybook/nextjs": ^7.0.6
+    "@types/node": ^18.15.11
+    "@types/react": ^18.0.33
+    "@types/react-dom": ^18.0.11
+    "@typescript-eslint/eslint-plugin": ^5.57.1
+    autoprefixer: ^10.4.14
+    chromatic: ^6.17.3
+    eslint-config-common: "workspace:*"
+    next: ^13.4.7
+    postcss: ^8.4.24
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    storybook: ^7.0.6
+    storybook-addon-designs: ^6.3.1
+    storybook-addon-turbo-build: ^2.0.0
+    tailwind: ^4.0.0
+    tsconfig-common: "workspace:*"
+    turbo: ^1.9.3
+    typescript: ^5.1.5
+    viem: ^1.2.0
+    wagmi: ^1.3.2
+  languageName: unknown
+  linkType: soft
+
 "client-only@npm:0.0.1":
   version: 0.0.1
   resolution: "client-only@npm:0.0.1"
@@ -7198,9 +7198,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"client@workspace:apps/client-public":
+"client-public@workspace:apps/client-public":
   version: 0.0.0-use.local
-  resolution: "client@workspace:apps/client-public"
+  resolution: "client-public@workspace:apps/client-public"
   dependencies:
     "@next/font": ^13.4.7
     "@storybook/addon-actions": ^7.0.6
