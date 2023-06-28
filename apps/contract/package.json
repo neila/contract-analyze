@@ -1,0 +1,12 @@
+{
+  "name": "contract",
+  "version": "0.1.0",
+  "description": "UNCHAIN events NFT contract",
+  "private": true,
+  "scripts": {
+    "slither": "slither ./src/day-5/PuttyV2.sol --solc-args \"--optimize --optimize-runs 100000\"",
+    "slither:report": "slither ./src/day-5/PuttyV2.sol --solc-args \"--optimize --optimize-runs 100000\" --checklist > .slithereport.md",
+    "deploy:rinkeby": "forge create src/day-5/PuttyV2.sol:PuttyV2 --etherscan-api-key $ETHERSCAN_KEY --verify --rpc-url $RINKEBY_RPC_URL --interactive --constructor-args https://api.rinkeby.putty.finance/metadata/ 0 0xc778417e063141139fce010982780140aa0cd5ab",
+    "deploy:mainnet": "forge create src/day-5/PuttyV2.sol:PuttyV2 --etherscan-api-key $ETHERSCAN_KEY --verify --rpc-url $MAINNET_RPC_URL --interactive --constructor-args https://api.putty.finance/metadata/ 0 0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2"
+  }
+}
