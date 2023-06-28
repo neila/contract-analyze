@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "client-public",
   "version": "0.1.0",
   "description": "UNCHAIN events NFT public minting page",
   "private": true,

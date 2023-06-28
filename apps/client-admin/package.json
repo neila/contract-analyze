@@ -1,5 +1,5 @@
 {
-  "name": "admin",
+  "name": "client-admin",
   "version": "0.1.0",
   "description": "UNCHAIN events NFT control panel",
   "private": true,
