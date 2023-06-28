@@ -1,0 +1,14 @@
+.vscode
+
+node_modules
+
+packages/contract/.openzeppelin
+packages/contract/artifacts
+packages/contract/cache
+packages/contract/dist
+packages/contract/typechain-types
+packages/contract/coverage*
+packages/contract/gasReporterOutput.json
+
+packages/client_public/.next
+packages/client_admin/.next

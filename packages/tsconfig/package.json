@@ -1,0 +1,7 @@
+{
+  "name": "tsconfig-common",
+  "version": "0.1.0",
+  "description": "Typescript configuration for UNCHAIN events NFT",
+  "license": "MIT",
+  "private": true
+}
