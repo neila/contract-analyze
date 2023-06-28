@@ -54,6 +54,8 @@ jobs:
         with:
           version: nightly
       - name: Setup forge
+        working-directory: apps/contract
         run: forge install
       - name: Run tests
+        working-directory: apps/contract
         run: forge test  --gas-report
