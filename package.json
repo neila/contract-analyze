@@ -20,7 +20,8 @@
   "scripts": {
     "contract": "yarn workspace contract",
     "contract:test": "yarn workspace contract test",
-    "client": "yarn workspace client",
+    "client": "yarn workspace client-public",
+    "admin": "yarn workspace client-admin",
     "format:check": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --check .",
     "format:fix": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write .",
     "lint:check": "yarn lint:js:check && yarn lint:sol:check",
