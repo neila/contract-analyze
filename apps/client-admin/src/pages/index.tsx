@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 const Page: NextPage<PageProps> = ({ params, searchParams }) => {
   return (
-    <RootLayout pageTitle="landing">
-      <div>
+    <RootLayout pageTitle="admin">
+      <div className="">
         <h1 className="">
           Typography {'<'}h1{'>'}
         </h1>

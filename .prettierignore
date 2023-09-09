@@ -1,15 +1,16 @@
 .vscode
 
 .yarn
-node_modules
+**/node_modules
 
-packages/contract/.openzeppelin
-packages/contract/artifacts
-packages/contract/cache
-packages/contract/dist
-packages/contract/typechain-types
-packages/contract/coverage*
-packages/contract/gasReporterOutput.json
+apps/contract/.openzeppelin
+apps/contract/artifacts
+apps/contract/cache
+apps/contract/dist
+apps/contract/typechain-types
+apps/contract/coverage*
+apps/contract/gasReporterOutput.json
 
-packages/client_public/.next
-packages/client_admin/.next
+apps/client-public/.next
+
+apps/client-admin/.next
