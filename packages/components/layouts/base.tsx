@@ -79,7 +79,7 @@ const RootLayout: FC<PageProps> = ({ pageTitle, children }) => {
         <title>{pageTitle ? `${pageTitle}@${siteTitle}` : siteTitle}</title>
       </Head>
 
-      <div>
+      <div className="">
         {/* <Header /> */}
         <main>{children}</main>
         {/* <Footer /> */}
