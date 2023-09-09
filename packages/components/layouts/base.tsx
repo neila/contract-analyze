@@ -1,5 +1,4 @@
 import type { PageProps } from '@components/types';
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
 import { FC } from 'react';
 
@@ -11,10 +10,10 @@ import { FC } from 'react';
 
 export const metadata = {
   title: {
-    template: '%s | events@UNCHAIN',
-    default: 'UNCHAIN events',
+    template: '%s | admin@UNCHAIN_events',
+    default: 'UNCHAIN events NFT mint page (admin)',
   },
-  description: 'UNCHAIN events NFT mint page',
+  description: 'UNCHAIN events NFT mint page (admin)',
   keywords: ['UNCHAIN', 'events', 'NFTs'],
   category: 'technology',
   authors: [{ name: 'neila', url: 'https://github.com/neila' }],
@@ -25,12 +24,12 @@ export const metadata = {
   },
   openGraph: {
     title: 'UNCHAIN events NFT mint page',
-    description: 'Mint your proof of attendance to an UNCHAIN event.',
-    url: 'https://ethereumjapan.org',
-    siteName: 'ethereumjapan.org',
+    description: 'UNCHAIN events NFT mint page (admin)',
+    // url: 'https://ethereumjapan.org',
+    // siteName: 'ethereumjapan.org',
     images: [
       {
-        url: 'https://ethereumjapan.org/logo/ej.png',
+        //  url: 'https://ethereumjapan.org/logo/ej.png',
         width: 800,
         height: 600,
       },
@@ -40,20 +39,20 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ethereum Japan',
+    title: 'UNCHAIN events NFT mint page',
     description: 'Mint your proof of attendance to an UNCHAIN event.',
     siteId: '1511737631948034048',
     creator: '@zsh0x',
     creatorId: '1511737631948034048',
-    images: ['https://ethereumjapan.org/ej.png'],
+    // images: ['https://ethereumjapan.org/ej.png'],
   },
   themeColor: [
     { media: '(prefers-color-scheme: light)', color: '#B8FAF6' },
     { media: '(prefers-color-scheme: dark)', color: '#C9B3F5' },
   ],
-  icons: {
-    icon: '/logo/unchain.png',
-  },
+  // icons: {
+  //   icon: '/logo/unchain.png',
+  // },
   robots: {
     index: true,
     follow: true,
@@ -69,27 +68,22 @@ export const metadata = {
   },
 };
 
-const fontInter = Inter({
-  subsets: ['latin'],
-  display: 'swap',
-});
-
 // const styleCache = createCache({ key: 'next' });
 
 const RootLayout: FC<PageProps> = ({ pageTitle, children }) => {
-  const siteTitle = 'Ethereum Japan';
+  const siteTitle = 'UNCHAIN_events';
 
   return (
     <>
       <Head>
-        <title>{pageTitle ? `${pageTitle} | ${siteTitle}` : siteTitle}</title>
+        <title>{pageTitle ? `${pageTitle}@${siteTitle}` : siteTitle}</title>
       </Head>
 
-      <body className={fontInter.className}>
+      <div>
         {/* <Header /> */}
         <main>{children}</main>
         {/* <Footer /> */}
-      </body>
+      </div>
     </>
   );
 };
