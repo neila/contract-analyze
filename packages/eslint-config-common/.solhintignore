@@ -1,0 +1,9 @@
+../../apps/contract/.openzeppelin
+../../apps/contract/artifacts
+../../apps/contract/out
+../../apps/contract/cache
+../../apps/contract/dist
+../../apps/contract/lib
+../../apps/contract/typechain-types
+../../apps/contract/coverage*
+../../apps/contract/gasReporterOutput.json
