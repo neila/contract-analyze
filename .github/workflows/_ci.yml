@@ -39,9 +39,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run slither
-        uses: crytic/slither-action@v0.2.0
+        uses: crytic/slither-action@v0.3.0
         continue-on-error: true
         with:
+          target: apps/contract
           fail-on: 'config'
   test:
     name: forge test
@@ -50,12 +51,20 @@ jobs:
       FOUNDRY_PROFILE: ci
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: recursive
       - uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
       - name: Setup forge
         working-directory: apps/contract
         run: forge install
+      - name: forge build
+        working-directory: apps/contract
+        run: |
+          forge --version
+          forge build --sizes
+        id: build
       - name: Run tests
         working-directory: apps/contract
-        run: forge test  --gas-report
+        run: forge test --gas-report

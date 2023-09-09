@@ -1,7 +1,6 @@
 .vscode
 
-.yarn
-**/node_modules
+node_modules
 
 apps/contract/.openzeppelin
 apps/contract/artifacts
