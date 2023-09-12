@@ -28,7 +28,7 @@
     "lint:check": "yarn lint js:check && yarn lint sol:check",
     "lint:fix": "yarn lint js:fix && yarn lint sol:fix",
     "scan": "yarn tsc && yarn format:check && yarn lint:check",
-    "client:dev": "cp -r ./packages/contract/typechain-types ./packages/client/types/typechain-types && yarn workspace client dev"
+    "client:dev": "cp -r ./apps/contract/typechain-types ./apps/client/types/typechain-types && yarn workspace client dev"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
