@@ -3,8 +3,6 @@ pragma solidity ^0.8.19;
 
 import "../lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol";
 
-// import 1155
-
 contract EventNft is ERC165 {
     // function supportsInterface(bytes4 interfaceID) external view  returns (
     //     interfaceId == type(IERC1155).interfaceId ||
