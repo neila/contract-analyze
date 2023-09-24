@@ -6,10 +6,10 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shiftbase-inc/UNCHAIN-events-NFT.git"
+    "url": "git+https://github.com/shiftbase-inc/event-nfts.git"
   },
   "bugs": {
-    "url": "https://github.com/shiftbase-inc/UNCHAIN-events-NFT/issues"
+    "url": "https://github.com/shiftbase-inc/event-nfts/issues"
   },
   "author": "neila <40727091+neila@users.noreply.github.com>",
   "workspaces": [
@@ -39,6 +39,7 @@
     "prettier": "^2.8.3",
     "prettier-plugin-solidity": "^1.1.2",
     "simple-git-hooks": "^2.8.1",
+    "ts-node": "^10.9.1",
     "typescript": "5.1.3"
   }
 }
