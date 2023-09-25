@@ -19,7 +19,6 @@
   "packageManager": "yarn@3.6.0",
   "scripts": {
     "contract": "yarn workspace contract",
-    "contract:test": "yarn workspace contract test",
     "client": "yarn workspace client-public",
     "admin": "yarn workspace client-admin",
     "lint": "yarn workspace eslint-config-common",
