@@ -44,8 +44,7 @@ jobs:
           path: '**/node_modules'
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: integration_test
-        working-directory: apps/contract
-        run: yarn test:hardhat
+        run: yarn contract test:hardhat
 
   static-analysis:
     name: Static analysis (slither)
