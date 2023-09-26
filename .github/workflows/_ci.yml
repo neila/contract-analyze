@@ -51,6 +51,8 @@ jobs:
           path: |
             ${{ github.workspace }}/.yarn/cache
             ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/apps/client-admin/node_modules
+            ${{ github.workspace }}/apps/client-public/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: (hardhat) interface tests
         working-directory: apps/contract
