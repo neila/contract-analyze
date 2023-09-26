@@ -32,6 +32,8 @@ jobs:
           path: |
             ${{ github.workspace }}/.yarn/cache
             ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/apps/client-admin/node_modules
+            ${{ github.workspace }}/apps/client-public/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: scan (tsc + prettier + solhint)
         run: yarn scan
