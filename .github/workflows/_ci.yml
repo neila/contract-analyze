@@ -18,9 +18,21 @@ jobs:
             ${{ github.workspace }}/apps/client-public/node_modules
             ${{ github.workspace }}/apps/contract/artifacts
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/foundry.toml') }}
-      - name: Install packages
+      - name: Install node packages
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
+      - uses: foundry-rs/foundry-toolchain@v1
+        with:
+          version: nightly
+      - name: Setup forge
+        working-directory: apps/contract
+        run: forge install
+      - name: forge build
+        working-directory: apps/contract
+        run: |
+          forge --version
+          forge build --sizes
+        id: build
 
   check:
     runs-on: ubuntu-latest
@@ -30,8 +42,8 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ github.workspace }}/node_modules
             ${{ github.workspace }}/.yarn/cache
+            ${{ github.workspace }}/node_modules
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/foundry.toml') }}
       - name: scan (tsc + prettier + solhint)
         run: yarn scan
@@ -70,21 +82,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ github.workspace }}/node_modules
             ${{ github.workspace }}/.yarn/cache
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/apps/contract/artifacts
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/foundry.toml') }}
-      - uses: foundry-rs/foundry-toolchain@v1
-        with:
-          version: nightly
-      - name: Setup forge
-        working-directory: apps/contract
-        run: forge install
-      - name: forge build
-        working-directory: apps/contract
-        run: |
-          forge --version
-          forge build --sizes
-        id: build
       - name: (forge) contract tests
         working-directory: apps/contract
         run: forge test --gas-report
