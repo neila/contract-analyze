@@ -14,9 +14,11 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ github.workspace }}/node_modules
             ${{ github.workspace }}/.yarn/cache
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-nodemodules
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/apps/client-admin/node_modules
+            ${{ github.workspace }}/apps/client-public/node_modules
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('**/foundry.toml') }}
       - name: Build client-admin
         run: yarn workspace client-admin turbo build
       - name: Build client-public
