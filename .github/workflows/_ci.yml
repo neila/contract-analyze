@@ -46,7 +46,8 @@ jobs:
             ${{ github.workspace }}/.yarn/cache
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-nodemodules
       - name: integration_test
-        run: yarn contract test:hardhat
+        working-directory: apps/contract
+        run: yarn test:hardhat
 
   static-analysis:
     name: Static analysis (slither)
