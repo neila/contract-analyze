@@ -12,3 +12,15 @@ docs/
 
 # Dotenv file
 .env
+
+# python environment
+.venv
+
+#Hardhat files
+cache_hardhat
+artifacts
+dist
+
+#typechain
+typechain
+typechain-types

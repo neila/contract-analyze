@@ -36,11 +36,11 @@ forge test --gas-report
 環境構築:
 
 ```
-python3 -m venv .pyenv
-source .pyenv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 python -m pip install -r requirements.txt
-solc-select install 0.8.16
-solc-select use 0.8.16
+solc-select install 0.8.19
+solc-select use 0.8.19
 ```
 
 実行:
