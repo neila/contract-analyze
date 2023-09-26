@@ -36,20 +36,6 @@ jobs:
       - name: scan (tsc + prettier + solhint)
         run: yarn scan
 
-  static-analysis:
-    name: Static analysis (slither)
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          submodules: recursive
-      - name: Run slither
-        uses: crytic/slither-action@v0.3.0
-        continue-on-error: true
-        with:
-          target: apps/contract
-          fail-on: 'config'
-
   interface-test:
     name: interface test
     runs-on: ubuntu-latest
@@ -87,6 +73,13 @@ jobs:
           forge --version
           forge build --sizes
         id: build
+      - name: (slither) static analysis
+        uses: crytic/slither-action@v0.3.0
+        continue-on-error: true
+        with:
+          target: apps/contract
+          fail-on: 'config'
+          ignore-compile: true
       - name: (forge) contract tests
         working-directory: apps/contract
         run: forge test --gas-report
