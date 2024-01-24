@@ -1,0 +1,44 @@
+{
+  "name": "contract-analyze",
+  "version": "0.1.0",
+  "description": "environment to play around with smart contracts",
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neila/contract-analyze.git"
+  },
+  "bugs": {
+    "url": "https://github.com/neila/contract-analyze/issues"
+  },
+  "author": "neila <40727091+neila@users.noreply.github.com>",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@3.6.0",
+  "scripts": {
+    "contract": "yarn workspace contract",
+    "client": "yarn workspace client",
+    "admin": "yarn workspace client",
+    "lint": "yarn workspace eslint-config-common",
+    "format:check": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --check .",
+    "format:fix": "prettier --ignore-unknown --no-error-on-unmatched-pattern --ignore-path .prettierignore --write .",
+    "lint:check": "yarn lint js:check && yarn lint sol:check",
+    "lint:fix": "yarn lint js:fix && yarn lint sol:fix",
+    "scan": "yarn tsc && yarn format:check && yarn lint:check",
+    "client:dev": "cp -r ./apps/contract/typechain ./apps/client/src/types && yarn workspace client dev"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^3.2.4",
+    "prettier-plugin-solidity": "^1.3.1",
+    "simple-git-hooks": "^2.8.1",
+    "ts-node": "^10.9.1",
+    "typescript": "5.1.3"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "./packages/tsconfig/tsconfig.json",
+    "./apps/contract/tsconfig.json",
+    "./apps/client/tsconfig.json",
+  ],
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": [".git/", ".yarn/cache/", "**/node_modules/"],
+}

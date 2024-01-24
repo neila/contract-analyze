@@ -1,0 +1,30 @@
+name: CI
+
+on: push
+
+jobs:
+  node:
+    uses: ./.github/workflows/_node.yml
+
+  forge:
+    uses: ./.github/workflows/_forge.yml
+
+  build:
+    runs-on: ubuntu-latest
+    needs: node
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ github.workspace }}/node_modules
+            ${{ github.workspace }}/.yarn/cache
+          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}-nodemodules
+      - name: Build client-admin
+        run: yarn workspace client-admin turbo build
+      - name: Build client-public
+        run: yarn workspace client-public turbo build
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true

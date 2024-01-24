@@ -1,0 +1,38 @@
+{
+  "name": "contract",
+  "version": "0.1.0",
+  "description": "contract",
+  "private": true,
+  "scripts": {
+    "slither": "slither ./src/EventNft.sol --solc-args \"--optimize --optimize-runs 100000\"",
+    "slither:report": "slither ./src/EventNft.sol --solc-args \"--optimize --optimize-runs 100000\" --checklist > .slithereport.md",
+    "deploy:sepolia": "forge create src/EventNft.sol:EventNft --etherscan-api-key $ETHERSCAN_API_KEY --verify --rpc-url $SEPOLIA_RPC --interactive",
+    "deploy:mainnet": "forge create src/EventNft.sol:EventNft --etherscan-api-key $ETHERSCAN_API_KEY --verify --rpc-url $MAINNET_RPC --interactive",
+    "test:hardhat": "hardhat test",
+    "test:forge": "forge test",
+    "cp": "rm -rf ../client/src/types/ ../client/artifacts/ && mkdir ../client/src/types/ ../client/artifacts/ && cp -a artifacts/ ../client/artifacts/"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^2.0.3",
+    "@nomicfoundation/hardhat-ethers": "npm:@nomiclabs/hardhat-ethers@2.2.3",
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.10",
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-toolbox-viem": "^2.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.3",
+    "@nomicfoundation/hardhat-viem": "^1.0.2",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.6",
+    "chai": "^4.3.10",
+    "dotenv": "^16.3.1",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.19.4",
+    "hardhat-gas-reporter": "^1.0.9",
+    "solidity-coverage": "^0.8.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "viem": "^2.5.0",
+    "wagmi": "^2.5.1"
+  }
+}
