@@ -1,10 +1,15 @@
 {
+  "composite": true,
   "extends": "../../packages/tsconfig/tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./",
-    "module": "commonjs",
-    "strict": true,
   },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"],
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "hardhat.config.ts",
+    "script/*.s.ts",
+    "test/*.t.ts",
+  ],
+  "exclude": ["**/node_modules"],
 }

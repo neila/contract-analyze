@@ -6603,7 +6603,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/estree@npm:*, @types/estree@npm:^1.0.0":
+"@types/estree@npm:*, @types/estree@npm:^1.0.5":
   version: 1.0.5
   resolution: "@types/estree@npm:1.0.5"
   checksum: dd8b5bed28e6213b7acd0fb665a84e693554d850b0df423ac8076cc3ad5823a6bc26b0251d080bdc545af83179ede51dd3f6fa78cad2c46ed1f29624ddf3e41a
@@ -7368,9 +7368,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@wagmi/connectors@npm:4.1.9":
-  version: 4.1.9
-  resolution: "@wagmi/connectors@npm:4.1.9"
+"@wagmi/connectors@npm:4.1.10":
+  version: 4.1.10
+  resolution: "@wagmi/connectors@npm:4.1.10"
   dependencies:
     "@coinbase/wallet-sdk": 3.9.1
     "@metamask/sdk": 0.14.1
@@ -7379,19 +7379,19 @@ __metadata:
     "@walletconnect/ethereum-provider": 2.11.0
     "@walletconnect/modal": 2.6.2
   peerDependencies:
-    "@wagmi/core": 2.6.0
+    "@wagmi/core": 2.6.1
     typescript: ">=5.0.4"
     viem: 2.x
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a22d2a6ab4530cfdecf2a31ca8c23ae873fc9139a1d27bd137f874824669fef83b2aa7638b2fba23060b015b8897a8fa2f616ec980ab4c1f4984667d28eb4466
+  checksum: 490a287cf1dc06a1257f5c23b3cc9a4d35dae934bb22a4210b34d99e454756969c6aad9fbfbf8636a173526143d3c1eac64ca808d6468925ae4b67128df56315
   languageName: node
   linkType: hard
 
-"@wagmi/core@npm:2.6.0":
-  version: 2.6.0
-  resolution: "@wagmi/core@npm:2.6.0"
+"@wagmi/core@npm:2.6.1":
+  version: 2.6.1
+  resolution: "@wagmi/core@npm:2.6.1"
   dependencies:
     eventemitter3: 5.0.1
     mipd: 0.0.5
@@ -7405,7 +7405,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: e59fb3372f8396b8644b24f114a63b6f7ce408e5836688e9b54b036c30611d5472cdfe5af1a2b03211e6d09f158f1038df6526d91ccdcf33e4e2e0f18b18962a
+  checksum: 16ffbc962cd296ab345228503712d58c62f8ca095c7dccbc2e8b5e939306d8298a68412a3dd216a4ced08f6e0692df262606fc2475796cbbcf7b366acec025e4
   languageName: node
   linkType: hard
 
@@ -8749,13 +8749,13 @@ __metadata:
   linkType: hard
 
 "axios@npm:^1.5.1":
-  version: 1.6.5
-  resolution: "axios@npm:1.6.5"
+  version: 1.6.6
+  resolution: "axios@npm:1.6.6"
   dependencies:
     follow-redirects: ^1.15.4
     form-data: ^4.0.0
     proxy-from-env: ^1.1.0
-  checksum: e28d67b2d9134cb4608c44d8068b0678cfdccc652742e619006f27264a30c7aba13b2cd19c6f1f52ae195b5232734925928fb192d5c85feea7edd2f273df206d
+  checksum: 0a299c22643992a4f00c8f143e5d41815ff3c2bd56b9b9cc9cd3b6dfe43e9beabdd305b6d0d6ef41748021498a389165d32963c556da4a48f4042b1ea95dd30e
   languageName: node
   linkType: hard
 
@@ -9199,7 +9199,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.14.5, browserslist@npm:^4.22.2":
+"browserslist@npm:^4.21.10, browserslist@npm:^4.22.2":
   version: 4.22.2
   resolution: "browserslist@npm:4.22.2"
   dependencies:
@@ -9793,7 +9793,6 @@ __metadata:
     storybook-addon-turbo-build: ^2.0.0
     tailwindcss: ^3.3.3
     tsconfig-common: "workspace:*"
-    turbo: ^1.9.3
     typescript: ^5.1.5
     viem: ^2.5.0
     wagmi: ^2.5.1
@@ -10129,6 +10128,7 @@ __metadata:
     prettier-plugin-solidity: ^1.3.1
     simple-git-hooks: ^2.8.1
     ts-node: ^10.9.1
+    turbo: ^1.9.3
     typescript: 5.1.3
   languageName: unknown
   linkType: soft
@@ -10933,9 +10933,9 @@ __metadata:
   linkType: hard
 
 "dotenv@npm:^16.0.0, dotenv@npm:^16.3.1":
-  version: 16.4.0
-  resolution: "dotenv@npm:16.4.0"
-  checksum: f39dccc0eb25345675045d91762b8c92fc853402a8b25ba02723a7e27da58cefe0593771bbea97781df09300514eedb393b6c8f7bfa547fd9f7b69f0c965cbdb
+  version: 16.4.1
+  resolution: "dotenv@npm:16.4.1"
+  checksum: a343f0a1d156deef8c60034f797969867af4dbccfacedd4ac15fad04547e7ffe0553b58fc3b27a5837950f0d977e38e9234943fbcec4aeced4e3d044309a76ab
   languageName: node
   linkType: hard
 
@@ -11009,9 +11009,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.4.601":
-  version: 1.4.643
-  resolution: "electron-to-chromium@npm:1.4.643"
-  checksum: e97f15a3cb10460e8763f1b6a080bdd566c2375a63259af18a48ece03af0c0cf2aea4d25e7f0b2cf532f56e469efd4259ebafd6aa5a6e69ea679459e08f3645f
+  version: 1.4.645
+  resolution: "electron-to-chromium@npm:1.4.645"
+  checksum: ac7d23b8123f09e2343016216b1a8f297ccfb4ae9dccefe3716023344cda8a81656916d40a87039fa3d448cac31c2c4147c6b913b22178a3a00d0221a8019513
   languageName: node
   linkType: hard
 
@@ -20141,9 +20141,9 @@ __metadata:
   linkType: hard
 
 "spdx-exceptions@npm:^2.1.0":
-  version: 2.3.0
-  resolution: "spdx-exceptions@npm:2.3.0"
-  checksum: cb69a26fa3b46305637123cd37c85f75610e8c477b6476fa7354eb67c08128d159f1d36715f19be6f9daf4b680337deb8c65acdcae7f2608ba51931540687ac0
+  version: 2.4.0
+  resolution: "spdx-exceptions@npm:2.4.0"
+  checksum: b1b650a8d94424473bf9629cf972c86a91c03cccc260f5c901bce0e4b92d831627fec28c9e0a1e9c34c5ebad0a12cf2eab887bec088e0a862abb9d720c2fd0a1
   languageName: node
   linkType: hard
 
@@ -20838,7 +20838,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser-webpack-plugin@npm:^5.3.1, terser-webpack-plugin@npm:^5.3.7":
+"terser-webpack-plugin@npm:^5.3.1, terser-webpack-plugin@npm:^5.3.10":
   version: 5.3.10
   resolution: "terser-webpack-plugin@npm:5.3.10"
   dependencies:
@@ -22041,11 +22041,11 @@ __metadata:
   linkType: hard
 
 "wagmi@npm:^2.5.1":
-  version: 2.5.1
-  resolution: "wagmi@npm:2.5.1"
+  version: 2.5.2
+  resolution: "wagmi@npm:2.5.2"
   dependencies:
-    "@wagmi/connectors": 4.1.9
-    "@wagmi/core": 2.6.0
+    "@wagmi/connectors": 4.1.10
+    "@wagmi/core": 2.6.1
     use-sync-external-store: 1.2.0
   peerDependencies:
     "@tanstack/react-query": ">=5.0.0"
@@ -22055,7 +22055,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: a14c872bba4c6eebf70085305326f998e930f22a53141f5824a49149474ac9173f1db8d2402aba3bd4eb7216d5ef59f165c681ec3dc1c8231898f4a0630cde82
+  checksum: 4426bfdc4eef8e24d39676b19b3dfb198b79e7b14b24d2639c1cfb368f1c84af014eabaebada44a2afeca9e5911db80a7a526896637602a8d4c0935ad370388b
   languageName: node
   linkType: hard
 
@@ -22238,17 +22238,17 @@ __metadata:
   linkType: hard
 
 "webpack@npm:5":
-  version: 5.89.0
-  resolution: "webpack@npm:5.89.0"
+  version: 5.90.0
+  resolution: "webpack@npm:5.90.0"
   dependencies:
     "@types/eslint-scope": ^3.7.3
-    "@types/estree": ^1.0.0
+    "@types/estree": ^1.0.5
     "@webassemblyjs/ast": ^1.11.5
     "@webassemblyjs/wasm-edit": ^1.11.5
     "@webassemblyjs/wasm-parser": ^1.11.5
     acorn: ^8.7.1
     acorn-import-assertions: ^1.9.0
-    browserslist: ^4.14.5
+    browserslist: ^4.21.10
     chrome-trace-event: ^1.0.2
     enhanced-resolve: ^5.15.0
     es-module-lexer: ^1.2.1
@@ -22262,7 +22262,7 @@ __metadata:
     neo-async: ^2.6.2
     schema-utils: ^3.2.0
     tapable: ^2.1.1
-    terser-webpack-plugin: ^5.3.7
+    terser-webpack-plugin: ^5.3.10
     watchpack: ^2.4.0
     webpack-sources: ^3.2.3
   peerDependenciesMeta:
@@ -22270,7 +22270,7 @@ __metadata:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 43fe0dbc30e168a685ef5a86759d5016a705f6563b39a240aa00826a80637d4a3deeb8062e709d6a4b05c63e796278244c84b04174704dc4a37bedb0f565c5ed
+  checksum: 178a0e7e9e5b26264a19dd5fe554a3508a8afafc9cce972bfd4452b5128d0db1b37832f5e615be1cff1934f24da0de967929f199be2b3fe283ca1951f98ea3fe
   languageName: node
   linkType: hard
 

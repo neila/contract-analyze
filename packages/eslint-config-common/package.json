@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "js:check": "eslint '../../**/*.{js,jsx,ts,tsx}'",
+    "js:check": "eslint --ignore-path .eslintignore '../../**/*.{js,jsx,ts,tsx}'",
     "js:fix": "eslint --fix '../../**/*.{js,jsx,ts,tsx}'",
     "sol:check": "solhint --config ./.solhint.json '../../**/*.sol'",
     "sol:fix": "solhint --config ./.solhint.json '../../**/*..sol' --fix"

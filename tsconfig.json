@@ -1,9 +1,6 @@
 {
-  "extends": [
-    "./packages/tsconfig/tsconfig.json",
-    "./apps/contract/tsconfig.json",
-    "./apps/client/tsconfig.json",
-  ],
+  "extends": ["./packages/tsconfig/tsconfig.json"],
+  "compilerOptions": { "composite": true },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": [".git/", ".yarn/cache/", "**/node_modules/"],
 }
